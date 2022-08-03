@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "../components/Header";
+import Banner from "../components/Banner";
 import Image from "next/image";
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
       </Head>
 
       <Header />
+      <Banner />
     </div>
   );
 };
