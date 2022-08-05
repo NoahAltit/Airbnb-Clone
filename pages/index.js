@@ -6,7 +6,14 @@ import MediumCard from "../components/MediumCard";
 import LargeCard from "../components/LargeCard";
 import Footer from "../components/Footer";
 
-const Home = ({ exploreData, cardsData }) => {
+import bannerTwo from "../assets/bannerTwo.png";
+
+import exploreData from "../data/exploreData.json";
+import cardsData from "../data/cardsData.json";
+
+// const Home = ({exploreData, cardsData}) => {
+
+const Home = () => {
   return (
     <div className="">
       <Head>
@@ -21,6 +28,20 @@ const Home = ({ exploreData, cardsData }) => {
         {/* Explore Nearby */}
         <section className="pt-6">
           <h2 className="text-4xl font-semibold pb-5">Explore Nearby</h2>
+
+          {/* Data pulled from papareact.com */}
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {exploreData?.map((item) => {
+              return (
+                <SmallCard
+                  key={item.img}
+                  img={item.img}
+                  location={item.location}
+                  distance={item.distance}
+                />
+              );
+            })}
+          </div> */}
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {exploreData?.map((item) => {
@@ -51,7 +72,7 @@ const Home = ({ exploreData, cardsData }) => {
 
         {/* Call To Action Card */}
         <LargeCard
-          img="https://links.papareact.com/4cj"
+          img={bannerTwo}
           title="The Greatest Outdoors"
           description="Wishlists curated by Airbnb"
           btnTxt="Get Inspired"
@@ -64,21 +85,21 @@ const Home = ({ exploreData, cardsData }) => {
 };
 
 // Pulling data from a server
-export async function getStaticProps() {
-  const exploreData = await fetch("https://links.papareact.com/pyp").then(
-    (res) => res.json()
-  );
+// export async function getStaticProps() {
+//   const exploreData = await fetch("https://links.papareact.com/pyp").then(
+//     (res) => res.json()
+//   );
 
-  const cardsData = await fetch("https://links.papareact.com/zp1").then((res) =>
-    res.json()
-  );
+//   const cardsData = await fetch("https://links.papareact.com/zp1").then((res) =>
+//     res.json()
+//   );
 
-  return {
-    props: {
-      exploreData,
-      cardsData,
-    },
-  };
-}
+//   return {
+//     props: {
+//       exploreData,
+//       cardsData,
+//     },
+//   };
+// }
 
 export default Home;
