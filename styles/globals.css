@@ -3,7 +3,19 @@
 @tailwind utilities;
 
 @layer components {
+  .homeBtn {
+    @apply hidden md:inline text-indigo-600 text-xl outline-none bg-white w-[135px] px-8 py-4 shadow-md rounded-lg font-bold hover:shadow-xl active:scale-90 transition duration-150;
+  }
+
   .button {
     @apply px-4 py-2 text-center w-fit border rounded-full cursor-pointer hover:shadow-lg active:scale-95 active:bg-gray-100 transition transform duration-100 ease-out;
+  }
+
+  .headerRight {
+    @apply bg-gray-100 rounded-full;
+  }
+
+  .sideMenu {
+    @apply shadow-md;
   }
 }
