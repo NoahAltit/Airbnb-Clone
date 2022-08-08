@@ -1,2 +1,2 @@
-## View the app live
+## See the app live
 https://airbnb-clone-noahaltit.vercel.app/
