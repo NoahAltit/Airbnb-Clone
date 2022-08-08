@@ -4,7 +4,7 @@
 
 @layer components {
   .homeBtn {
-    @apply hidden md:inline text-indigo-600 text-xl outline-none bg-white w-[135px] px-8 py-4 shadow-md rounded-lg font-bold hover:shadow-xl active:scale-90 transition duration-150;
+    @apply hidden md:inline text-red-400 text-xl outline-none bg-white w-[135px] px-8 py-4 shadow-md rounded-lg font-bold hover:shadow-xl hover:bg-red-400 hover:text-white active:scale-90 transition duration-300;
   }
 
   .button {
