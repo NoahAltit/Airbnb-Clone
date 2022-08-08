@@ -11,7 +11,7 @@ const Banner = () => {
           Book a trip. Host travellers. All on Airbnb.
         </p>
 
-        <div className="space-x-10 my-5">
+        <div className="space-x-10 my-5 ">
           <button className="homeBtn">Explore</button>
           <button className="homeBtn">Host</button>
         </div>
