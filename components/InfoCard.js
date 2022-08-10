@@ -23,7 +23,7 @@ const InfoCard = ({
       </div>
 
       <div className="flex flex-col flex-grow pl-5">
-        <div className="flex justify-between">
+        <div className="hidden sm:inline-flex justify-between">
           <p>{location}</p>
           <HeartIcon className="h-7 cursor-pointer" />
         </div>
@@ -32,14 +32,16 @@ const InfoCard = ({
 
         <div className="border-b w-10 pt-2" />
 
-        <p className="pt-2 text-sm text-gray-500 flex-grow">{description}</p>
+        <p className="hidden md:inline-flex pt-2 text-sm text-gray-500 flex-grow">
+          {description}
+        </p>
 
         <div className="flex justify-between items-end pt-5">
-          <p className="flex items-center">
+          <p className="hidden sm:inline-flex items-center">
             <StarIcon className="h-5 text-red-400" /> {star}
           </p>
 
-          <div>
+          <div className="hidden sm:inline">
             <p className="text-lg lg:text-2xl font-semibold pb-2">{price}</p>
             <p className="text-right font-extralight">{total}</p>
           </div>
